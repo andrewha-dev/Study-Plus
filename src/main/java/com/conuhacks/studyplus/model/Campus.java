@@ -14,9 +14,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.conuhacks.studyplus.model.Building;
+import lombok.AccessLevel;
+import lombok.Setter;
+import lombok.Getter;
+
+
+@Setter(AccessLevel.PACKAGE)
 
 @Entity
-@Table(name = "Campus")
+@Table(name = "campus")
 public class Campus {
 	private String campusName;
 	@Id
@@ -24,7 +30,7 @@ public class Campus {
 	private Long id;
 	private Date startDate;
 	
-	@OneToMany
-	@JoinColumn(name="buildings")
+	@OneToMany(targetEntity = Campus.class)
+	@JoinColumn(name = "fk_building")
 	Set<Building> campusBuildings=new HashSet<Building>();
 }

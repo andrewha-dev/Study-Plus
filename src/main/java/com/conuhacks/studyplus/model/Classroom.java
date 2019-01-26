@@ -1,5 +1,6 @@
 package com.conuhacks.studyplus.model;
 import java.util.ArrayList;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,15 +15,21 @@ import javax.persistence.Table;
 
 import com.conuhacks.studyplus.model.ClassSubject;
 
+import lombok.AccessLevel;
+import lombok.Setter;
+import lombok.Getter;
+
+
+@Setter(AccessLevel.PACKAGE)
 @Entity
-@Table(name = "Classroom")
+@Table(name = "classroom")
 public class Classroom {
 	private String location;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@OneToMany
-	@JoinColumn(name="classSubject")
-	Set<ClassSubject> c  = new HashSet<ClassSubject>();
+	@OneToMany(targetEntity=Classroom.class)
+	@JoinColumn(name="fk_classSubject")
+	private Set<ClassSubject> c  = new HashSet<ClassSubject>();
 }
