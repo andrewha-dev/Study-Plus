@@ -32,5 +32,5 @@ public class Campus {
 	
 	@OneToMany(targetEntity = Campus.class)
 	@JoinColumn(name = "fk_building")
-	Set<Building> campusBuildings=new HashSet<Building>();
+	private Set<Building> campusBuildings=new HashSet<Building>();
 }
