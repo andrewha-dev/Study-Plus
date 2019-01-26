@@ -14,7 +14,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Study Plus</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -50,12 +50,84 @@
 </nav>
 
 	<div class="container">
-
-		<div class="starter-template">
-			<h1>Study Plus Landing Page</h1>
-			<h2>
-				<span th:text="'Message: ' + ${message}"></span>
-			</h2>
+	
+		<div class="starter-template col-6">
+		<h1>Need a classroom?</h1>
+		<form>
+		
+		<div class="form-group">
+			  <label for="campus">Select a campus:</label>
+			  <select class="form-control" id="campus" name="campus">
+			    <option value='sgw'>SGW Campus</option>
+			    <option value='loy'>Loyola Campus</option>
+			  </select>
+		</div>
+		
+		<div class="form-group">
+			  <label for="building">Select a building:</label>
+			  <select class="form-control" id="building" name="building">
+				<option value='EV'>EV Building</option>
+				<option value='FG'>FG Building</option>
+				<option value='Hall'>H Building</option>
+				<option value='JMSB'>JMSB Building</option>
+			    
+			  </select>
+		</div>
+		 
+		  
+		  
+		  <div class="form-group">
+			  <label for="startTime">Start Time:</label>
+			  <select class="form-control" id="startTime" name="startTime">
+			    <option value="8">8:00</option>
+			    <option value="9">9:00</option>
+			    <option value="10">10:00</option>
+			    <option value="11">11:00</option>
+			    <option value="12">12:00</option>
+			    <option value="13">13:00</option>
+			    <option value="14">14:00</option>
+			    <option value="15">15:00</option>
+			    <option value="16">16:00</option>
+			    <option value="17">17:00</option>			    
+			    <option value="18">18:00</option>
+			    <option value="19">19:00</option>
+			    <option value="20">20:00</option>
+			    <option value="21">21:00</option>
+			    <option value="22">22:00</option>
+			    <option value="23">23:00</option>
+			    <option value="24">00:00</option>
+			  </select>
+		</div>
+		
+		<div class="form-group">
+			  <label for="endTime">End Time:</label>
+			  <select class="form-control" id="endTime" name="startTime">
+			    <option value="8">8:00</option>
+			    <option value="9">9:00</option>
+			    <option value="10">10:00</option>
+			    <option value="11">11:00</option>
+			    <option value="12">12:00</option>
+			    <option value="13">13:00</option>
+			    <option value="14">14:00</option>
+			    <option value="15">15:00</option>
+			    <option value="16">16:00</option>
+			    <option value="17">17:00</option>			    
+			    <option value="18">18:00</option>
+			    <option value="19">19:00</option>
+			    <option value="20">20:00</option>
+			    <option value="21">21:00</option>
+			    <option value="22">22:00</option>
+			    <option value="23">23:00</option>
+			    <option value="24">00:00</option>
+			  </select>
+		</div>
+		  
+		  <div class="form-check">
+		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+		    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Search for classroom</button>
+		</form>
 		</div>
 
 	</div>
