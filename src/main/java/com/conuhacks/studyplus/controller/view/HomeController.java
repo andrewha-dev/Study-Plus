@@ -12,7 +12,7 @@ public class HomeController {
 	
 	
 	@RequestMapping("/")
-	public String Index(Map<String, Object> model) {
+	public String Home(Map<String, Object> model) {
 		model.put("message", this.message);
 		return "home";
 	}
