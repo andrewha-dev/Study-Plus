@@ -30,6 +30,35 @@ $(document).ready(function(){
 		
 	});
 	
+	$('form').submit(function(e){
+		e.preventDefault();
+		var astartTime;
+		var aendTime;
+		var acampus;
+		var abuilding;
+		
+		acampus = $('select#campus option:selected').val();
+		abuilding = $("select#building option:selected").val();
+		astartTime = $('select#startTime option:selected').val();
+		aendTime = $('select#endTime option:selected').val();
+//		console.log(campus + " " + building + " " + startTime + " " + endTime)
+		console.log("Do ajax request");
+		$.ajax({
+
+			dataType: "text",
+			  url: "api/test",
+			  data: {campus : acampus, building : abuilding, startTime : astartTime, endTime : aendTime}
+			})
+			  .done(function( data ) {	
+				  var blah = data;
+				console.log(data + "awdwad");			    
+			    console.log("Done");
+			    var json = JSON.parse(blah);
+			    console.log(json);
+		});
+		
+	});
+	
 	
 	
 	
